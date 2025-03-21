@@ -2,7 +2,7 @@
 <h1 align="center">MathFusion: Enhancing Mathematic Problem-solving of LLM through Instruction Fusion</h1>
 
 <p align="center">
-    <a href="https://arxiv.org/abs/xxx"><img src="https://img.shields.io/badge/📄-Paper-red"></a>
+    <a href="https://arxiv.org/abs/2503.16212"><img src="https://img.shields.io/badge/📄-Paper-red"></a>
     <a href="https://github.com/QizhiPei/MathFusion/blob/main/LICENSE"><img src="https://img.shields.io/github/license/QizhiPei/MathFusion"></a>
     <a href="https://huggingface.co/collections/QizhiPei/mathfusion-67d92b8e505635db1baf20bb"><img src="https://img.shields.io/badge/🤗 HuggingFace-Data & Models-green"></a>
 </p>
@@ -78,9 +78,20 @@ export MODEL_NAME=your_sft_model_path
 bash test.sh
 ```
 
+## 🙏 Acknowledgements
+Many thanks to
+* [DART-Math](https://github.com/hkust-nlp/dart-math)
+* [Qwen2.5-Math](https://github.com/QwenLM/Qwen2.5-Math)
+* [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory/tree/main)
+
 ## Citation
+If you find our code, model, or data are useful, please kindly cite our [paper](https://arxiv.org/abs/2503.16212):
 ```
-@article{todo
+@article{mathfusion,
+ title={MathFusion: Enhancing Mathematic Problem-solving of LLM through Instruction Fusion}, 
+ author={Qizhi Pei and Lijun Wu and Zhuoshi Pan and Yu Li and Honglin Lin and Chenlin Ming and Xin Gao and Conghui He and Rui Yan},
+ journal={arXiv preprint arXiv:2503.16212},
+ year={2025}
 }
 ```
 
