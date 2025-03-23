@@ -176,4 +176,4 @@ cython_debug/
 LLaMA-Factory/
 outputs/
 run_test.sh
-my_test.sh
+my_test
