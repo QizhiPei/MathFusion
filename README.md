@@ -33,8 +33,7 @@ Install the dependencies:
 ```bash
 conda create -n mathfusion python=3.10
 conda activate mathfusion
-# Install Pytorch according to your CUDA version
-pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu121
+pip install torch==2.3.1 --index-url https://download.pytorch.org/whl/cu121
 # Install LLaMA-Factory
 git clone https://github.com/hiyouga/LLaMA-Factory.git
 cd LLaMA-Factory
@@ -42,9 +41,9 @@ git checkout v0.9.1
 pip install transformers==4.46.1 accelerate==0.34.2 deepspeed==0.15.4
 pip install -e ".[torch,metrics]"
 # Install packages for evaluation
-pip install flash-attn==2.7.3 --no-build-isolation
-pip install sympy==1.12.1 antlr4-python3-runtime==4.11.1 pebble word2number boto3 triton==2.3.1
-pip install vllm==0.5.5
+pip install flash-attn --no-build-isolation
+pip install sympy==1.12.1 antlr4-python3-runtime==4.11.1 pebble word2number boto3 triton==2.3.1 ipython
+pip install vllm==0.5.3.post1
 # Install latex2sympy
 cd ../evaluation/latex2sympy
 pip install -e .

@@ -442,7 +442,7 @@ class Generator:
             else:  # Save to file
                 os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
-                with open(save_path, "a") as f:
+                with open(save_path, "a", encoding="utf-8") as f:
                     for sample in batch_new_samples:
                         f.write(orjson.dumps(sample.to_dict()).decode() + "\n")
 

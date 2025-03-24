@@ -1,9 +1,9 @@
 source activate mathfusion
 
 [ -z "$MODEL_NAME" ] && MODEL_NAME=llama3_8b_mathfusion
+RES_PATH=$(echo "${MODEL_NAME##*/}" | tr '[:upper:]' '[:lower:]')
 
 PROMPT_TYPE="cot-qa"
-pre=~/src/LLaMA-Factory/saves/mathfusion
 n_shots=0
 
 DATASETS_LIST=(
@@ -18,7 +18,7 @@ DATASETS_LIST=(
 for DATASETS in ${DATASETS_LIST[@]}; do
   save_pre=outputs/${DATASETS////_}
   mkdir -p $save_pre
-  save_path="${save_pre}/${MODEL_NAME}_${PROMPT_TYPE}_n${n_shots}.jsonl"
+  save_path="${save_pre}/${RES_PATH}_${PROMPT_TYPE}_n${n_shots}_seed0.jsonl"
   echo $save_path
 
   if [ -f "$save_path" ]; then
@@ -30,7 +30,7 @@ for DATASETS in ${DATASETS_LIST[@]}; do
 
   python evaluation/run.py \
       --gen_save_path $save_path \
-      --model_name_or_path "${pre}/${MODEL_NAME}" \
+      --model_name_or_path "${MODEL_NAME}" \
       --datasets $DATASETS \
       --max_new_toks 2048 --temperature 0 \
       --prompt_template $PROMPT_TYPE \
@@ -57,7 +57,7 @@ if [[ "$MODEL_NAME" == *"llama3"* ]]; then
   
   python evaluation/run.py \
       --gen_save_path $save_path \
-      --model_name_or_path "${pre}/${MODEL_NAME}" \
+      --model_name_or_path "${MODEL_NAME}" \
       --datasets $DATASETS \
       --max_new_toks 2048 --temperature 0 \
       --prompt_template $PROMPT_TYPE \

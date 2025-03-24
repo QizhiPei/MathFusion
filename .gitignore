@@ -177,3 +177,4 @@ LLaMA-Factory/
 outputs/
 run_test.sh
 my_test
+evaluation/test_tmp.sh
