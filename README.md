@@ -74,7 +74,7 @@ Our evaluation codes are adapted from [Qwen2.5-Math](https://github.com/QwenLM/Q
 You need to first download the model from HuggingFace, or SFT the model on your own. Then run the following evaluation script:
 ```bash
 export MODEL_NAME=your_sft_model_path
-bash test.sh
+bash evaluation/test.sh
 ```
 
 ## 🙏 Acknowledgements
