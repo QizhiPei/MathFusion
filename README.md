@@ -7,6 +7,8 @@
     <a href="https://huggingface.co/collections/QizhiPei/mathfusion-67d92b8e505635db1baf20bb"><img src="https://img.shields.io/badge/🤗 HuggingFace-Data & Models-green"></a>
 </p>
 
+🎉🎉: MathFusion is accepted ACL 2025 (main).
+
 We introduce MathFusion, a novel framework that enhances mathematical reasoning through cross-problem instruction synthesis. MathFusion implements this through three fusion strategies:
 1. **Sequential Fusion**, which chains related problems to model solution dependencies.
 2. **Parallel Fusion**, which combines analogous problems to reinforce conceptual understanding.
