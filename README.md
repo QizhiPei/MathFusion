@@ -1,5 +1,5 @@
 <p align="center">
-<h1 align="center">MathFusion: Enhancing Mathematic Problem-solving of LLM through Instruction Fusion</h1>
+<h1 align="center">MathFusion: Enhancing Mathematical Problem-solving of LLM through Instruction Fusion</h1>
 
 <p align="center">
     <a href="https://arxiv.org/abs/2503.16212"><img src="https://img.shields.io/badge/📄-Paper-red"></a>
